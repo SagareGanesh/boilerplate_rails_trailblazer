@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :expenses
+
+  def generate_api_key
+    ApiKeyHandler.encoded_api_key(self.id)
+  end
 end
