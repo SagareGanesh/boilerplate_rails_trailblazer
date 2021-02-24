@@ -1,0 +1,35 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/users",
+  "description": "Listing users",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/users",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.boilerplate-rails.com; version=1",
+        "X-Api-Key": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTY1OTAzNDQsInVzZXJfaWQiOiIxIn0.XshR2Ki9Kf3VMJ2tGnwc9vT4Jx_mz6Y8RDYBQjSKvzs"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"email\": \"test@gmail.com\",\n    \"expenses\": [\n\n    ]\n  }\n]",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
