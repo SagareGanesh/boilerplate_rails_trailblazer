@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  include Trailblazer::Rails::Controller
+
   before_action :authenticate!
   X_API_KEY = 'X-Api-Key'
 

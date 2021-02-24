@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  errors:
+    missing_params: "Missing params => %{params}"
+    record_not_found: "Record not found"
+    invalid_creds: "Invalid credentials"
+    something_went_wrong: "Something went wrong"
