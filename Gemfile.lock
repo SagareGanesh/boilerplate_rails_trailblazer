@@ -74,16 +74,28 @@ GEM
       activesupport
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    declarative (0.0.20)
+    declarative-builder (0.1.0)
+      declarative-option (< 0.2.0)
+    declarative-option (0.1.0)
     devise (4.7.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    disposable (0.4.7)
+      declarative (>= 0.0.9, < 1.0.0)
+      declarative-builder (< 0.2.0)
+      declarative-option (< 0.2.0)
+      representable (>= 2.4.0, <= 3.1.0)
+      uber (< 0.2.0)
     erubi (1.10.0)
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hashie (4.1.0)
+    hirb (0.7.3)
     i18n (1.8.7)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.2)
@@ -162,6 +174,14 @@ GEM
       redis-store (>= 1.2, < 2)
     redis-store (1.9.0)
       redis (>= 4, < 5)
+    reform (2.3.3)
+      disposable (>= 0.4.2, < 0.5.0)
+      representable (>= 2.4.0, < 3.1.0)
+      uber (< 0.2.0)
+    representable (3.0.4)
+      declarative (< 0.1.0)
+      declarative-option (< 0.2.0)
+      uber (< 0.2.0)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -175,8 +195,39 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
     thor (1.0.1)
+    trailblazer (2.1.0)
+      trailblazer-macro (>= 2.1.0, < 2.2.0)
+      trailblazer-macro-contract (>= 2.1.0, < 2.2.0)
+      trailblazer-operation
+    trailblazer-activity (0.11.5)
+      trailblazer-context (>= 0.3.1, < 0.4.0)
+    trailblazer-activity-dsl-linear (0.3.5)
+      trailblazer-activity (>= 0.11.3, < 1.0.0)
+    trailblazer-context (0.3.3)
+      hashie (>= 3.0.0)
+    trailblazer-developer (0.0.20)
+      hirb
+      representable
+      trailblazer-activity (>= 0.11.0, < 1.0.0)
+      trailblazer-activity-dsl-linear
+    trailblazer-loader (0.1.2)
+    trailblazer-macro (2.1.4)
+      trailblazer-activity (>= 0.11.2, < 1.0.0)
+      trailblazer-activity-dsl-linear (>= 0.3.3, < 1.0.0)
+      trailblazer-operation (>= 0.6.5)
+    trailblazer-macro-contract (2.1.0)
+      reform (>= 2.2.0, < 3.0.0)
+    trailblazer-operation (0.6.6)
+      trailblazer-activity (>= 0.11.2, < 1.0.0)
+      trailblazer-activity-dsl-linear (>= 0.3.2, < 1.0.0)
+      trailblazer-developer (>= 0.0.8)
+    trailblazer-rails (2.1.7)
+      railties (>= 4.0.0)
+      trailblazer (>= 2.1.0.beta1, < 2.2.0)
+      trailblazer-loader (>= 0.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uber (0.1.0)
     versionist (2.0.1)
       activesupport (>= 3)
       railties (>= 3)
@@ -204,11 +255,13 @@ DEPENDENCIES
   redis-rails
   spring
   sqlite3 (~> 1.4)
+  trailblazer
+  trailblazer-rails
   tzinfo-data
   versionist
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.2.3
